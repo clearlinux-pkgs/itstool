@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.2
-Release  : 6
+Release  : 7
 URL      : http://files.itstool.org/itstool/itstool-2.0.2.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.2.tar.bz2
 Summary  : No detailed summary available
@@ -13,6 +13,7 @@ License  : GPL-3.0
 Requires: itstool-bin
 Requires: itstool-data
 Requires: itstool-doc
+Requires: libxml2-python
 BuildRequires : libxml2-dev
 BuildRequires : libxml2-python
 
@@ -48,13 +49,20 @@ doc components for the itstool package.
 %setup -q -n itstool-2.0.2
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1491757981
 %configure --disable-static
-make V=1 %{?_smp_mflags}
+make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
+export SOURCE_DATE_EPOCH=1491757981
 rm -rf %{buildroot}
 %make_install
 
