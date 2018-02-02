@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.4
-Release  : 10
+Release  : 11
 URL      : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Summary  : No detailed summary available
