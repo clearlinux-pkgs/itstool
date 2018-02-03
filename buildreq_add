@@ -1,4 +1,4 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
 libxml2-dev
-libxml2-python
+libxml2-python3

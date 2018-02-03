@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.4
-Release  : 11
+Release  : 12
 URL      : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Summary  : No detailed summary available
@@ -15,7 +15,7 @@ Requires: itstool-data
 Requires: itstool-doc
 Requires: libxml2-python
 BuildRequires : libxml2-dev
-BuildRequires : libxml2-python
+BuildRequires : libxml2-python3
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
@@ -58,9 +58,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1508277324
+export SOURCE_DATE_EPOCH=1517631732
 %configure --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
@@ -70,7 +70,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1508277324
+export SOURCE_DATE_EPOCH=1517631732
 rm -rf %{buildroot}
 %make_install
 
