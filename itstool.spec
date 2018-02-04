@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.4
-Release  : 13
+Release  : 14
 URL      : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Summary  : No detailed summary available
@@ -13,8 +13,10 @@ License  : GPL-3.0
 Requires: itstool-bin
 Requires: itstool-data
 Requires: itstool-doc
+Requires: libxml2-legacy-legacypython
 Requires: libxml2-python
 BuildRequires : libxml2-dev
+BuildRequires : libxml2-legacy-legacypython
 BuildRequires : libxml2-python3
 BuildRequires : llvm-dev
 BuildRequires : pbr
@@ -59,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517704903
+export SOURCE_DATE_EPOCH=1517707910
 export CC=clang
 export CXX=clang++
 export LD=ld.gold
@@ -67,7 +69,7 @@ export CFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --p
 export CXXFLAGS=$CFLAGS
 unset LDFLAGS
 unset LDFLAGS
-%configure --disable-static
+%configure --disable-static PYTHON=/usr/bin/python2
 make  %{?_smp_mflags}
 
 %check
@@ -78,7 +80,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1517704903
+export SOURCE_DATE_EPOCH=1517707910
 rm -rf %{buildroot}
 %make_install
 
