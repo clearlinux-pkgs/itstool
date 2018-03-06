@@ -1,3 +1,44 @@
+commit 07b7b6c207f9684ef610a738bd8a9314179e6a72
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Mon Oct 16 11:55:12 2017 -0400
+
+    Use $PYTHON for libxml2 check to use the right python
+    
+    Fixes https://github.com/itstool/itstool/issues/16
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c6419a81c35da62d577b43e8f5c4b53a0c92e0fa
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Mon Oct 16 11:51:53 2017 -0400
+
+    Update INSTALL file
+
+ INSTALL | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+
+commit d3adf0264ee2b6fd28b7eff7dec33501d6e75a7c
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Wed Oct 11 23:12:38 2017 -0400
+
+    Fix massive performance issue
+    
+    Fixed https://github.com/itstool/itstool/issues/15
+
+ itstool.in | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+commit f1934cffa7f1809321f68fc156c7039fdb27673b
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Wed Oct 4 13:28:48 2017 -0400
+
+    Version 2.0.3
+
+ NEWS         | 8 ++++++++
+ configure.ac | 2 +-
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
 commit c12b29db71ec860ec9d15e2ef6e5bdf2a82355cd
 Merge: 204ed57 717ea02
 Author: Shaun McCance <shaunm@gnome.org>

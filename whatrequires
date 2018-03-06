@@ -37,6 +37,7 @@ comedilib
 dbus
 dconf
 docker
+dstat
 edk2
 eog
 evince
@@ -57,6 +58,7 @@ geany-plugins
 gedit
 geoclue
 geocode-glib
+gexiv2
 gimp
 git
 glib
@@ -97,7 +99,6 @@ harfbuzz
 hexchat
 ibus
 isa-l
-javapackages-tools
 json-glib
 kbproto
 kmod
@@ -155,6 +156,7 @@ linux-hyperv-lts
 linux-hyperv-mini
 linux-kvm
 linux-lts
+linux-pk414
 linux-tools
 man-db
 man-pages
@@ -177,7 +179,6 @@ polkit
 quilt
 recordproto
 rest
-scala
 scrnsaverproto
 shim
 spice-gtk
