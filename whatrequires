@@ -21,6 +21,7 @@ atk
 audit
 autofs
 babl
+baobab
 bigreqsproto
 cairo
 ceph
@@ -75,6 +76,7 @@ gnome-logs
 gnome-music
 gnome-online-accounts
 gnome-panel
+gnome-photos
 gnome-session
 gnome-settings-daemon
 gnome-shell
@@ -104,6 +106,7 @@ gtksourceview
 gtkspell3
 gvfs
 gzip
+hamlib
 harfbuzz
 hexchat
 ibus
