@@ -7,10 +7,21 @@ NetworkManager
 OpenSP
 R
 R-IRkernel
+R-NMF
+R-RcppProgress
 R-devtools
+R-doRNG
+R-ggjoy
+R-ggridges
 R-git2r
+R-modelr
 R-pbdZMQ
+R-pkgmaker
+R-reprex
+R-rngtools
 R-roxygen2
+R-rstanarm
+R-tidyverse
 accountsservice
 adwaita-icon-theme
 alsa-utils
@@ -63,6 +74,7 @@ gexiv2
 gfbgraph
 gimp
 git
+gjs
 glib
 gmime
 gnome-applets
@@ -71,6 +83,7 @@ gnome-backgrounds
 gnome-bluetooth
 gnome-calculator
 gnome-color-manager
+gnome-control-center
 gnome-desktop
 gnome-logs
 gnome-music
