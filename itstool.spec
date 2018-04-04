@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.4
-Release  : 19
+Release  : 20
 URL      : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.4.tar.bz2
 Summary  : No detailed summary available
@@ -24,6 +24,7 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
+Patch1: 0001-be-more-careful-about-libxml2-memory-management.patch
 
 %description
 
@@ -55,13 +56,14 @@ doc components for the itstool package.
 
 %prep
 %setup -q -n itstool-2.0.4
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522218623
+export SOURCE_DATE_EPOCH=1522857231
 export CC=clang
 export CXX=clang++
 export LD=ld.gold
@@ -80,7 +82,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1522218623
+export SOURCE_DATE_EPOCH=1522857231
 rm -rf %{buildroot}
 %make_install
 
