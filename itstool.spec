@@ -21,7 +21,7 @@ BuildRequires : libxml2-python3
 BuildRequires : llvm-dev
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 Patch1: 0001-be-more-careful-about-libxml2-memory-management.patch
