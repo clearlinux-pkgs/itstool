@@ -1,3 +1,75 @@
+commit 2eb0a6cd3b15b0bca5abf19ba0fcff45bd457523
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Tue Aug 21 11:28:54 2018 -0400
+
+    Fix py 2/3 issues and add a test case
+
+ itstool.in                     | 34 +++++++++++++++-------------------
+ tests/preservespace1xml.xml    |  2 +-
+ tests/preservespace5xml.ll.po  | 19 +++++++++++++++++++
+ tests/preservespace5xml.ll.xml | 10 ++++++++++
+ tests/preservespace5xml.pot    | 18 ++++++++++++++++++
+ tests/preservespace5xml.xml    | 16 ++++++++++++++++
+ tests/run_tests.py             | 16 +++++++++++++---
+ 7 files changed, 92 insertions(+), 23 deletions(-)
+
+commit 2f82385da6faa2b33a346ba75d7efaf09a7f095c
+Author: Álvaro Muñoz <alvaro.munoz@gmail.com>
+Date:   Mon Aug 20 20:26:12 2018 -0300
+
+    Open file as bytes, since we're saving bytes!
+
+ itstool.in | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 83981112037eb326ba29c00281e5f187a37a26e0
+Author: Álvaro Muñoz <alvaro.munoz@gmail.com>
+Date:   Sat Aug 18 17:35:13 2018 -0300
+
+    Fix #28 (python 3.7, macOS)
+
+ itstool.in | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 45a43928cee0015b0361b021c914ef75ffe58e96
+Author: Álvaro Muñoz <alvaro.munoz@gmail.com>
+Date:   Sat Aug 18 17:34:36 2018 -0300
+
+    Fix #30
+
+ itstool.in | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 35138f8f3e208346914f5b11b9f6b230d0fa99aa
+Author: Álvaro Muñoz <alvaro.munoz@gmail.com>
+Date:   Sat Aug 18 17:33:53 2018 -0300
+
+    Fix compatibility with pyhton 3.7 (no need to encode to bytes)
+
+ itstool.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 9b84c007a73e8275ca45762f1bfa3ab7c3a852e2
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Wed Oct 25 12:10:03 2017 -0400
+
+    Be more careful about libxml2 memory management
+    
+    I think this fixes https://github.com/itstool/itstool/issues/17
+
+ itstool.in | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+
+commit 890f35998ba7f86bdc58227142309b8ecc618c10
+Author: Shaun McCance <shaunm@redhat.com>
+Date:   Mon Oct 16 11:58:49 2017 -0400
+
+    Version 2.0.4
+
+ NEWS         | 4 ++++
+ configure.ac | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
 commit 07b7b6c207f9684ef610a738bd8a9314179e6a72
 Author: Shaun McCance <shaunm@redhat.com>
 Date:   Mon Oct 16 11:55:12 2017 -0400
