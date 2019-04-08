@@ -5,6 +5,7 @@ evolution
 file-roller
 gdm
 geany-plugins
+gedit
 gnome-applets
 gnome-backgrounds
 gnome-calculator
@@ -19,6 +20,4 @@ gtk-doc
 libwacom
 simple-scan
 totem
-vinagre
-yelp-tools
 zenity
