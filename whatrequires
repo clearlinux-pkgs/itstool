@@ -1,11 +1,9 @@
 # This file contains recursive sources that require this package
-compat-gtksourceview-soname3
 eog
 evolution
 file-roller
 gdm
 geany-plugins
-gedit
 gnome-applets
 gnome-backgrounds
 gnome-calculator
@@ -16,8 +14,8 @@ gnome-music
 gnome-photos
 gnome-settings-daemon
 gnome-terminal
-gtk-doc
 libwacom
 simple-scan
 totem
+yelp
 zenity
