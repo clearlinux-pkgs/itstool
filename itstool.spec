@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.6
-Release  : 27
+Release  : 28
 URL      : http://files.itstool.org/itstool/itstool-2.0.6.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.6.tar.bz2
 Summary  : No detailed summary available
@@ -14,7 +14,6 @@ Requires: itstool-bin = %{version}-%{release}
 Requires: itstool-data = %{version}-%{release}
 Requires: itstool-license = %{version}-%{release}
 Requires: itstool-man = %{version}-%{release}
-Requires: libxml2-legacy-legacypython
 Requires: libxml2-python
 BuildRequires : buildreq-distutils3
 BuildRequires : libxml2-dev
@@ -66,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570820200
+export SOURCE_DATE_EPOCH=1570820801
 export GCC_IGNORE_WERROR=1
 export CC=clang
 export CXX=clang++
@@ -90,7 +89,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1570820200
+export SOURCE_DATE_EPOCH=1570820801
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/itstool
 cp %{_builddir}/itstool-2.0.6/COPYING %{buildroot}/usr/share/package-licenses/itstool/48703751ffc7d48dc3aa9609be19dd542cf9776b
