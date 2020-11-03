@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.6
-Release  : 28
+Release  : 29
 URL      : http://files.itstool.org/itstool/itstool-2.0.6.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.6.tar.bz2
 Summary  : No detailed summary available
@@ -59,24 +59,29 @@ man components for the itstool package.
 
 %prep
 %setup -q -n itstool-2.0.6
+cd %{_builddir}/itstool-2.0.6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570820801
+export SOURCE_DATE_EPOCH=1604443086
 export GCC_IGNORE_WERROR=1
 export CC=clang
 export CXX=clang++
 export LD=ld.gold
+CFLAGS=${CFLAGS/ -Wa,/ -fno-integrated-as -Wa,}
+CXXFLAGS=${CXXFLAGS/ -Wa,/ -fno-integrated-as -Wa,}
 export CFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wno-error -Wl,-z,max-page-size=0x1000 -march=westmere -mtune=haswell"
 export CXXFLAGS=$CFLAGS
+export FFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wno-error -Wl,-z,max-page-size=0x1000 -march=westmere -mtune=haswell"
+export FCFLAGS=$FFLAGS
 unset LDFLAGS
 unset LDFLAGS
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
@@ -86,10 +91,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1570820801
+export SOURCE_DATE_EPOCH=1604443086
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/itstool
 cp %{_builddir}/itstool-2.0.6/COPYING %{buildroot}/usr/share/package-licenses/itstool/48703751ffc7d48dc3aa9609be19dd542cf9776b
