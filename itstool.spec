@@ -4,7 +4,7 @@
 #
 Name     : itstool
 Version  : 2.0.7
-Release  : 33
+Release  : 34
 URL      : http://files.itstool.org/itstool/itstool-2.0.7.tar.bz2
 Source0  : http://files.itstool.org/itstool/itstool-2.0.7.tar.bz2
 Summary  : No detailed summary available
